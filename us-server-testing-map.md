@@ -2,160 +2,160 @@
 
 ## Administration
 
-- [ ] Change language.
-- [ ] Rebuild. 
+- [x] Change language.
+- [x] Rebuild. 
 
 ## Entities
 
 ### Account
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Contact
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Lead
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Lead Convert.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Lead Convert.
 
 ### Opportunity
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Create Document from Bottom Panel.
-- [ ] Select Document from Bottom Panel.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Create Document from Bottom Panel.
+- [x] Select Document from Bottom Panel.
 
 ### Case
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Email Template
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Remove from List View.
-- [ ] Remove from Detail View.
-- [ ] Duplicate.
+- [x] Creating.
+- [x] Updating.
+- [x] Remove from List View.
+- [x] Remove from Detail View.
+- [x] Duplicate.
 
 ### Email Filter
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Apply for imported emails (Personal Email).
-- [ ] Apply for imported emails (Group Email).
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Apply for imported emails (Personal Email).
+- [x] Apply for imported emails (Group Email).
 
 ### Email Folder
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Group Email Folder
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Personal Email Account
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Group Email Account
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Target List
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Populate the target list with leads using 'select all results'.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Populate the target list with leads using 'select all results'.
 
 ### Calendar
 
-- [ ] Create events.
-- [ ] A shared view.
-- [ ] Timeline.
+- [x] Create events.
+- [x] A shared view.
+- [x] Timeline.
 
 ### Meeting
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Send invitations.
-- [ ] Popup reminder.
-- [ ] Email reminder.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Send invitations.
+- [x] Popup reminder.
+- [x] Email reminder.
 
 ### Call
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Task
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Campaign
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Knowledge Base
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Send in email.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Send in email.
 
 ### Document
 
@@ -168,28 +168,28 @@
 
 ### User
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ### Team
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Assign a team position to a user (Position List field).
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Assign a team position to a user (Position List field).
 
 ### PDF Template
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
 
 ## Features
 
@@ -243,15 +243,15 @@
 
 ### Import
 
-- [ ] Import CSV with email address, phone number.
-- [ ] Import Create Only.
-- [ ] Import Create and Update.
-- [ ] Check duplicate detection.
-- [ ] Import invalid email, check the record is available in the Errors panel.
-- [ ] Import in idle.
-- [ ] Import by command line (manully).
-- [ ] Import with same params.
-- [ ] Revert import.
+- [x] Import CSV with email address, phone number.
+- [x] Import Create Only.
+- [x] Import Create and Update.
+- [x] Check duplicate detection.
+- [x] Import invalid email, check the record is available in the Errors panel.
+- [x] Import in idle.
+- [x] Import by command line (manully).
+- [x] Import with same params.
+- [x] Revert import.
 
 ### Currency
 
