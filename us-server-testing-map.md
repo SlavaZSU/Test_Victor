@@ -159,12 +159,12 @@
 
 ### Document
 
-- [ ] Creating.
-- [ ] Updating.
-- [ ] Removing from List View.
-- [ ] Removing from Detail View.
-- [ ] Duplicating.
-- [ ] Creating by drag-n-drpping file on the list view.
+- [x] Creating.
+- [x] Updating.
+- [x] Removing from List View.
+- [x] Removing from Detail View.
+- [x] Duplicating.
+- [x] Creating by drag-n-drpping file on the list view.
 
 ### User
 
@@ -195,51 +195,51 @@
 
 ### Personal Email Account
 
-- [ ] Create account with IMAP and SMTP.
-- [ ] Check emails are received and available in the user's INBOX.
-- [ ] Test email sending from the account.
+- [x] Create account with IMAP and SMTP.
+- [x] Check emails are received and available in the user's INBOX.
+- [x] Test email sending from the account.
 
 ### Group Email Account
 
-- [ ] Create account with IMAP and SMTP.
-- [ ] Check emails are received.
-- [ ] Test email sending from the account.
-- [ ] Email-to-Case.
+- [x] Create account with IMAP and SMTP.
+- [x] Check emails are received.
+- [x] Test email sending from the account.
+- [x] Email-to-Case.
 
 ### Email
 
-- [ ] Apply email template, test placeholders.
-- [ ] Save draft and send.
-- [ ] Remove email.
+- [x] Apply email template, test placeholders.
+- [x] Save draft and send.
+- [x] Remove email.
 
 ### Stream
 
-- [ ] Post on record.
-- [ ] Post attachments.
-- [ ] Update post.
-- [ ] Remove post.
-- [ ] Post to another user.
-- [ ] Post to team.
+- [x] Post on record.
+- [x] Post attachments.
+- [x] Update post.
+- [x] Remove post.
+- [x] Post to another user.
+- [x] Post to team.
 
 ### Portal
 
-- [ ] Create a portal, with portal role, portal user, layout set.
-- [ ] Check whether ACL is applied for the portal user.
-- [ ] Check whether layout set is applied for a logged portal user.
+- [x] Create a portal, with portal role, portal user, layout set.
+- [x] Check whether ACL is applied for the portal user.
+- [x] Check whether layout set is applied for a logged portal user.
 
 ### 2-factor authentication
 
-- [ ] Set up TOTP 2FA for a user and login under that user.
+- [x] Set up TOTP 2FA for a user and login under that user.
 
 ### Passwords
 
-- [ ] An admin creates a user (with an email address non-empty), password is empty, *Send Email with Access Info to User* is checked. Check a received access email. Try to login under the new user.
-- [ ] An admin changes a password to another user (on the User edit view). 
-- [ ] An admin changes a password to another user with *Send Email with Access Info to User* checked (the user should have email address). Check a received email.
-- [ ] A regular user changes own password (from the dropdown on the User detail view).
-- [ ] Send password change link for another regular user (under the admin from the dropdown on the User detail view).
-- [ ] Send password change link for a portal user.
-- [ ] Forgot password from the login page. Recover access for a user.
+- [x] An admin creates a user (with an email address non-empty), password is empty, *Send Email with Access Info to User* is checked. Check a received access email. Try to login under the new user.
+- [x] An admin changes a password to another user (on the User edit view). 
+- [x] An admin changes a password to another user with *Send Email with Access Info to User* checked (the user should have email address). Check a received email.
+- [x] A regular user changes own password (from the dropdown on the User detail view).
+- [x] Send password change link for another regular user (under the admin from the dropdown on the User detail view).
+- [x] Send password change link for a portal user.
+- [x] Forgot password from the login page. Recover access for a user.
 
 ### Import
 
@@ -255,28 +255,28 @@
 
 ### Currency
 
-- [ ] Currency converting.
+- [x] Currency converting.
 
 ### Entity Manager
 
-- [ ] Create a custom entity.
-- [ ] Edit entity.
-- [ ] Edit formula.
-- [ ] Create custom field.
-- [ ] Edit custom field.
-- [ ] Delete custom field.
-- [ ] Delete custom entity.
+- [x] Create a custom entity.
+- [x] Edit entity.
+- [x] Edit formula.
+- [x] Create custom field.
+- [x] Edit custom field.
+- [x] Delete custom field.
+- [x] Delete custom entity.
 
 ### Layout sets
 
-- [ ] Create a layout set.
-- [ ] Apply the layout set to a team and test it's working for a logged user (the team should be a default team for the user).
+- [x] Create a layout set.
+- [x] Apply the layout set to a team and test it's working for a logged user (the team should be a default team for the user).
 
 ### Lead Capture
 
-- [ ] Set up lead capture without opt-in confirmation, send API request, check lead is created.
-- [ ] Set up lead capture with opt-in confirmation, send API request, check whether works properly.
-- [ ] Check duplicate detecting works properly.
+- [x] Set up lead capture without opt-in confirmation, send API request, check lead is created.
+- [x] Set up lead capture with opt-in confirmation, send API request, check whether works properly.
+- [x] Check duplicate detecting works properly.
 
 ### Mass Email
 
