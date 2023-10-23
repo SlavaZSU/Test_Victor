@@ -222,7 +222,7 @@ mysql -u root -p
 ```
 CREATE DATABASE espocrm;
 ```
-- Exit the database and the container to the folder where our `.sql` dump is located. We run the command:
+- Exit the database and the container to the folder where our `.sql` dump is located. Run the command:
 ```
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
 ```
