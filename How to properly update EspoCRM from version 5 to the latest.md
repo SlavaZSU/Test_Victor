@@ -187,11 +187,11 @@ docker-compose up -d
 ```
 or
 ```
-sudo docker-compose up -d --build
+docker-compose up -d --build
 ```
 or
 ```
-sudo docker-compose up -d --build "$@"
+docker-compose up -d --build "$@"
 ```
 
 ## Transfer of instance and database files
@@ -210,3 +210,19 @@ sudo docker-compose up -d --build "$@"
 ```
 - Return to `our_instance_name` and copy its contents. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
 - After finishing copying in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+- Go to the database container through *Docker*: 
+```
+docker exec -it espocrm-mysql bash
+```
+- And go to the database itself:
+```
+mysql -u root -p
+```
+- Create an empty ***espocrm*** database:
+```
+CREATE DATABASE espocrm;
+```
+- Exit the database and the container to the folder where our `.sql` dump is located. We run the command:
+```
+docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
+```
