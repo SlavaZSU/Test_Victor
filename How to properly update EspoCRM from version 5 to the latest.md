@@ -220,9 +220,21 @@ mysql -u root -p
 ```
 - Create an empty ***espocrm*** database:
 ```
-CREATE DATABASE espocrm;
+- CREATE DATABASE espocrm;
 ```
-- Exit the database and the container to the folder where our `.sql` dump is located. Run the command:
+- Exit from the database and container to the folder where our `.sql` dump is located. Run the command:
 ```
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
+```
+- Go to the container using the command:
+```
+docker exec -it espocrm-php bash
+```
+or better
+```
+docker exec -u www-data -it espocrm-php bash
+```
+- Make *Rebuild*:
+```
+php rebuild.php
 ```
