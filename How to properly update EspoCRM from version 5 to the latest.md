@@ -239,4 +239,4 @@ docker exec -u www-data -it espocrm-php bash
 ```
 php rebuild.php
 ```
-- We are trying to log in to the UI of your instance: `localhost:8080` (or your other port).
+- Log in to the UI of your instance: `localhost:8080` (or your other port).
