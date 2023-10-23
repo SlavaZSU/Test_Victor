@@ -185,6 +185,14 @@ Start our container using the command:
 ```
 docker-compose up -d
 ```
+or
+```
+sudo docker-compose up -d --build
+```
+or
+```
+sudo docker-compose up -d --build "$@"
+```
 
 ## Transfer of instance and database files
 
@@ -201,4 +209,4 @@ docker-compose up -d
   ],
 ```
 - Return to `our_instance_name` and copy its contents. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
-- After finishing copying in the html folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+- After finishing copying in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
