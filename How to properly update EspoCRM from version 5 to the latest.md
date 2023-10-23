@@ -188,5 +188,17 @@ docker-compose up -d
 
 ## Transfer of instance and database files
 
-[Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
-
+- [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
+- Go to the folder `our_instance_name/data` and delete all the contents of the folder except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
+- In the file `config.php` (or `config-internal.php`, depending on the version of EspoCRM), change the following data:
+```
+'dbname' => 'espocrm',
+'user' => 'root',
+'password' => '1',
+'defaultPermissions' => [
+    'user' => 33,
+    'group' => 33
+  ],
+```
+- Return to `our_instance_name` and copy its contents. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
+- After finishing copying in the html folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
