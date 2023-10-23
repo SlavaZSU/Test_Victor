@@ -194,6 +194,7 @@ or
 docker-compose up -d --build "$@"
 ```
 
+
 ## Transfer of instance and database files
 
 - [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
@@ -238,3 +239,4 @@ docker exec -u www-data -it espocrm-php bash
 ```
 php rebuild.php
 ```
+- We are trying to log in to the UI of your instance: `localhost:8080` (or your other port).
