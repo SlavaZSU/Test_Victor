@@ -275,7 +275,7 @@ php rebuild.php
 
 - To be sure that the instance is working, log in to the UI: `localhost:8080` (or another free port specified in the environment's **docker-composer.yml**).
 
-## Ways and process of upgrading EspoCRM *v5.5.6*
+## Methods and process of upgrading EspoCRM *v5.5.6*
 
 - Download the following upgrades to `root_folder_of_your_environment/html` folder:
 
@@ -311,7 +311,7 @@ php rebuild.php
 
 - To upgrade EspoCRM from `v5.6.14` to `v5.7.11` and from `v5.6.14` to `v5.7.11` also use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade). 
 
-- You can continue to *Upgrade* in a similar way, but periodically from version to version you can check `root_folder_of_your_environment/html` folder for the presence of the `command.php file`. Once this file appears, you can switch to the most convenient method by CLI:
+- You can continue to *Upgrade* in a similar way, but periodically from version to version you can check `root_folder_of_your_environment/html` folder for the presence of the `command.php` file. Once this file appears, you can switch to the most convenient method by CLI:
   
 ```
 php command.php upgrade
