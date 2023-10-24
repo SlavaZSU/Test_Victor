@@ -275,7 +275,11 @@ or better
 docker exec -u www-data -it espocrm-php bash
 ```
 
-- Оновлюємо EspoCRM `v5.5.6` to `v5.6.14`. Для нам необхідно використати [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
+- Upgrade EspoCRM version from `v5.5.6` to `v5.6.14`. For this we need to use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
 ```
 php upgrade.php EspoCRM-upgrade-5.5.6-to-5.6.14.zip
+```
+After completion, upgrade is necessary make *Rebuild* from UI, to verify that your instance is running successfully after the upgrade. Or can make *Rebuild* by CLI:
+```
+php rebuild.php
 ```
