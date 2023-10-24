@@ -3,11 +3,13 @@
 The most convenient way to upgrade EspoCRM from version ***5*** to the current one is to use [Docker Compose](https://docs.espocrm.com/administration/docker/installation/#install-espocrm-with-docker-compose).
 
 ## Environment preparation:
+
 In addition to the version of EspoCRM (for example, `5.5.6`), we need to know the name and version of our database (for example, `mysql 5.7.43`) and the current version of php. This information can be found in *Administration > System Requirements*.
 
 Now we can select the required [environment](https://github.com/tmachyshyn/espocrm-environment).
 
 In our example, the **Dockerfile** will look like this:
+
 ```
 FROM php:7.4-apache
 
@@ -146,10 +148,10 @@ VOLUME /var/www/html
 RUN chown -R www-data:www-data /var/www
 
 CMD ["apache2-foreground"]
-
 ```
 
 And **docker-compose.yml** will have the following form (for the *espocrm-php* container, you can specify another unoccupied port):
+
 ```
 version: '3'
 
@@ -208,8 +210,8 @@ docker-compose up -d --build "$@"
     'group' => 33
   ],
 ```
-- Return to `our_instance_name` and copy its contents. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
-- After finishing copying in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+- Return to `our_instance_name` and copy its data. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
+- While in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
 - Go to the database container through *Docker*: 
 ```
 docker exec -it espocrm-mysql bash
@@ -220,7 +222,7 @@ mysql -u root -p
 ```
 - Create an empty ***espocrm*** database:
 ```
-- CREATE DATABASE espocrm;
+CREATE DATABASE espocrm;
 ```
 - Exit from the database and container to the folder where our `.sql` dump is located. Run the command:
 ```
@@ -242,4 +244,13 @@ php rebuild.php
 
 
 ## Transfer of instance and database files
-Let's say we want to update EspoCRM *v5.5.6*. 
+
+Let's update EspoCRM *v5.5.6*. 
+
+- Download the following updates to the `html` folder:
+```
+wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.5.6-to-5.6.14.zip
+wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.6.14-to-5.7.11.zip
+wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.7.11-to-5.8.5.zip
+```
+
