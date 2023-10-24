@@ -231,17 +231,19 @@ For *defaultPermissions*, specify the webserver user data and the group you will
 ],
 ```
 
-- Return to `/your_instance_name` and copy its data. Go to `root_folder_of_your_environment/html` and paste the copied files there.
+- Return to `/your_instance_name` and copy its data.
+
+- Go to `root_folder_of_your_environment/html` and paste the copied files there.
 
 - While in the `root_folder_of_your_environment/html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
   
-- Go to the database container through *Docker*:
+- Go to the *database container* through *Docker*:
 
 ```
 docker exec -it espocrm-mysql bash
 ```
 
-- And go to the database itself:
+- And go to the *database* itself:
   
 ```
 mysql -u root -p
@@ -253,7 +255,7 @@ mysql -u root -p
 CREATE DATABASE espocrm;
 ```
 
-- Exit from the Database and Container to the folder where our `.sql` dump is located. Run the command:
+- Exit from the *database* and *database container* to the folder where our `.sql` dump is located. Run the command:
   
 ```
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
@@ -266,29 +268,31 @@ docker exec -u www-data -it espocrm-php bash
 ```
 
 - Make *Rebuild*:
+
 ```
 php rebuild.php
 ```
 
-- To be sure that the instance is working, log in to the UI: `localhost:8080` (or your other port).
+- To be sure that the instance is working, log in to the UI: `localhost:8080` (or another free port specified in the environment's **docker-composer.yml**).
 
+## Ways and process of upgrading EspoCRM *v5.5.6*
 
-## Transfer of instance and database files
+- Download the following upgrades to `root_folder_of_your_environment/html` folder:
 
-Let's update EspoCRM *v5.5.6*. 
-
-- Download the following updates to the `html` folder:
 ```
 wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.5.6-to-5.6.14.zip
 wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.6.14-to-5.7.11.zip
 wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.7.11-to-5.8.5.zip
 ```
 
-- Go to the container using the command:
+- Go to the *php container* using the command:
+
 ```
 docker exec -it espocrm-php bash
 ```
-or better
+
+or better using the command for webserver user:
+
 ```
 docker exec -u www-data -it espocrm-php bash
 ```
