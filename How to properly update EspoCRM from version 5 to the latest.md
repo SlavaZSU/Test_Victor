@@ -2,14 +2,19 @@
 
 The most convenient way to upgrade EspoCRM from version ***5*** to the current one is to use [Docker Compose](https://docs.espocrm.com/administration/docker/installation/#install-espocrm-with-docker-compose).
 
-
 ## Environment preparation:
 
-In addition to the version of EspoCRM (for example, `5.5.6`), we need to know the name and version of our database (for example, `mysql 5.7.43`) and the current version of php. This information can be found in *Administration > System Requirements*.
+To create the correct environment, need to know the following information (can be found in *Administration > System Requirements*):
+1. *EspoCRM* version, e.g.`5.5.6`. 
+2. *Database* name and version, e.g. `mysql 5.7.43`.
+3. *PHP* used version, e.g. `7.4`.
+4. *Server type*, e.g. `apache` or `nginx`.
 
-Now we can select the required [environment](https://github.com/tmachyshyn/espocrm-environment).
+Select the required [Environment](https://github.com/tmachyshyn/espocrm-environment).
 
-In our example, the **Dockerfile** will look like this:
+### Dockerfile preparation:
+
+**Dockerfile** will look like:
 
 ```
 FROM php:7.4-apache
@@ -151,7 +156,9 @@ RUN chown -R www-data:www-data /var/www
 CMD ["apache2-foreground"]
 ```
 
-And **docker-compose.yml** will have the following form (for the *espocrm-php* container, you can specify another unoccupied port):
+### Docker-compose.yml preparation:
+
+The **docker-compose.yml** will have the following form (it's possible to specify another free port for the *espocrm-php* container):
 
 ```
 version: '3'
@@ -183,7 +190,7 @@ services:
       - 8080:80
 ```
 
-Start our container using the command:
+Start container using the command:
 ```
 docker-compose up -d
 ```
@@ -196,12 +203,11 @@ or
 docker-compose up -d --build "$@"
 ```
 
-
 ## Transfer of instance and database files
 
 - [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
 
-- Go to the folder `our_instance_name/data` and delete all the contents of the folder except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
+- Go to the folder `our_instance_name/data` and delete all data of the folder except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
 
 - In the file `config.php` (or `config-internal.php`, depending on the version of EspoCRM), change the following data:
 ```
@@ -275,11 +281,16 @@ or better
 docker exec -u www-data -it espocrm-php bash
 ```
 
-- Upgrade EspoCRM version from `v5.5.6` to `v5.6.14`. For this we need to use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
+- Upgrade EspoCRM version from `v5.5.6` to `v5.6.14`(from `v5.6.14` to `v5.7.11` and from `v5.6.14` to `v5.7.11`). For this we need to use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
 ```
 php upgrade.php EspoCRM-upgrade-5.5.6-to-5.6.14.zip
 ```
-After completion, upgrade is necessary make *Rebuild* from UI, to verify that your instance is running successfully after the upgrade. Or can make *Rebuild* by CLI:
+After completion *Upgrade* is necessary make *Rebuild* from UI, to verify that your instance is running successfully after the upgrade. Or can make *Rebuild* by CLI:
 ```
 php rebuild.php
 ```
+
+- You can continue to *Upgrade* in a similar way, but periodically from version to version you can check the root folder for the presence of the `command.php file`. Once this file appears in your `html` root folder, you can switch to the most convenient method:
+```
+php command.php upgrade
+``` 
