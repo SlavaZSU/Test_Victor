@@ -2,6 +2,7 @@
 
 The most convenient way to upgrade EspoCRM from version ***5*** to the current one is to use [Docker Compose](https://docs.espocrm.com/administration/docker/installation/#install-espocrm-with-docker-compose).
 
+
 ## Environment preparation:
 
 In addition to the version of EspoCRM (for example, `5.5.6`), we need to know the name and version of our database (for example, `mysql 5.7.43`) and the current version of php. This information can be found in *Administration > System Requirements*.
@@ -199,7 +200,9 @@ docker-compose up -d --build "$@"
 ## Transfer of instance and database files
 
 - [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
+
 - Go to the folder `our_instance_name/data` and delete all the contents of the folder except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
+
 - In the file `config.php` (or `config-internal.php`, depending on the version of EspoCRM), change the following data:
 ```
 'dbname' => 'espocrm',
@@ -210,24 +213,31 @@ docker-compose up -d --build "$@"
     'group' => 33
   ],
 ```
+
 - Return to `our_instance_name` and copy its data. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
+
 - While in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
-- Go to the database container through *Docker*: 
+  
+- Go to the database container through *Docker*:
 ```
 docker exec -it espocrm-mysql bash
 ```
+
 - And go to the database itself:
 ```
 mysql -u root -p
 ```
+
 - Create an empty ***espocrm*** database:
 ```
 CREATE DATABASE espocrm;
 ```
+
 - Exit from the database and container to the folder where our `.sql` dump is located. Run the command:
 ```
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
 ```
+
 - Go to the container using the command:
 ```
 docker exec -it espocrm-php bash
@@ -236,10 +246,12 @@ or better
 ```
 docker exec -u www-data -it espocrm-php bash
 ```
+
 - Make *Rebuild*:
 ```
 php rebuild.php
 ```
+
 - To be sure that the instance is working, log in to the UI of your instance: `localhost:8080` (or your other port).
 
 
@@ -254,3 +266,16 @@ wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.6.14-to-5.7.11
 wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.7.11-to-5.8.5.zip
 ```
 
+- Go to the container using the command:
+```
+docker exec -it espocrm-php bash
+```
+or better
+```
+docker exec -u www-data -it espocrm-php bash
+```
+
+- Оновлюємо EspoCRM `v5.5.6` to `v5.6.14`. Для нам необхідно використати [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
+```
+php upgrade.php EspoCRM-upgrade-5.5.6-to-5.6.14.zip
+```
