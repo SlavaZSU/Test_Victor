@@ -1,10 +1,9 @@
-# How to properly upgrade EspoCRM from version 5 to the latest
+# EspoCRM upgrade from version 5 to the latest
 
 The most convenient way to upgrade EspoCRM from version ***5*** to the current one is to use [Docker Compose](https://docs.espocrm.com/administration/docker/installation/#install-espocrm-with-docker-compose).
 
 ## Environment preparation:
-Let's say we want to update EspoCRM *v5.5.6*. 
-In addition to the version of EspoCRM, we need to know the name and version of our database (for example, `mysql 5.7.43`) and the current version of php. This information can be found in *Administration > System Requirements*.
+In addition to the version of EspoCRM (for example, `5.5.6`), we need to know the name and version of our database (for example, `mysql 5.7.43`) and the current version of php. This information can be found in *Administration > System Requirements*.
 
 Now we can select the required [environment](https://github.com/tmachyshyn/espocrm-environment).
 
@@ -239,4 +238,8 @@ docker exec -u www-data -it espocrm-php bash
 ```
 php rebuild.php
 ```
-- Log in to the UI of your instance: `localhost:8080` (or your other port).
+- To be sure that the instance is working, log in to the UI of your instance: `localhost:8080` (or your other port).
+
+
+## Transfer of instance and database files
+Let's say we want to update EspoCRM *v5.5.6*. 
