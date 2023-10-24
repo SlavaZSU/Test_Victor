@@ -297,16 +297,22 @@ or better using the command for webserver user:
 docker exec -u www-data -it espocrm-php bash
 ```
 
-- Upgrade EspoCRM version from `v5.5.6` to `v5.6.14`(from `v5.6.14` to `v5.7.11` and from `v5.6.14` to `v5.7.11`). For this we need to use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
+- Upgrade EspoCRM version from `v5.5.6` to `v5.6.14` using [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade):
+
 ```
 php upgrade.php EspoCRM-upgrade-5.5.6-to-5.6.14.zip
 ```
-After completion *Upgrade* is necessary make *Rebuild* from UI, to verify that your instance is running successfully after the upgrade. Or can make *Rebuild* by CLI:
+
+To verify that your instance is running successfully after the Upgrade, you can make *Rebuild* from UI (or by CLI):
+
 ```
 php rebuild.php
 ```
 
-- You can continue to *Upgrade* in a similar way, but periodically from version to version you can check the root folder for the presence of the `command.php file`. Once this file appears in your `html` root folder, you can switch to the most convenient method:
+- To upgrade EspoCRM from `v5.6.14` to `v5.7.11` and from `v5.6.14` to `v5.7.11` also use [Legacy way to upgrade](https://docs.espocrm.com/administration/upgrading/#legacy-way-to-upgrade). 
+
+- You can continue to *Upgrade* in a similar way, but periodically from version to version you can check `root_folder_of_your_environment/html` folder for the presence of the `command.php file`. Once this file appears, you can switch to the most convenient method by CLI:
+  
 ```
 php command.php upgrade
 ``` 
