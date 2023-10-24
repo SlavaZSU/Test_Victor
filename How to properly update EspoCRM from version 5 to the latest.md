@@ -191,64 +191,76 @@ services:
 ```
 
 Start container using the command:
+
 ```
 docker-compose up -d
 ```
+
 or
+
 ```
 docker-compose up -d --build
 ```
+
 or
+
 ```
 docker-compose up -d --build "$@"
 ```
 
-## Transfer of instance and database files
+## Transfer of Instance files and Database dump
 
-- [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) files of our instance and database.
+- Make [Backup](https://docs.espocrm.com/administration/backup-and-restore/#backup-and-restore) of instance and database files.
+  
+- Go to `/your_instance_name/data` and delete all data except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
+  
+- In the `config.php` file (or `config-internal.php`, depending the EspoCRM version), change the following data:
 
-- Go to the folder `our_instance_name/data` and delete all data of the folder except `/upload`, `config.php`, `config-internal.php` (if you had it), `.data` and `/logs` (if you need them).
-
-- In the file `config.php` (or `config-internal.php`, depending on the version of EspoCRM), change the following data:
 ```
 'dbname' => 'espocrm',
 'user' => 'root',
 'password' => '1',
-'defaultPermissions' => [
-    'user' => 33,
-    'group' => 33
-  ],
 ```
 
-- Return to `our_instance_name` and copy its data. Go to the folder where you have **docker-compose.yml** and the `html` folder has been created. Paste the copied files here.
+For *defaultPermissions*, specify the webserver user data and the group you will use (usually it's `www-data` or `root`). 
 
-- While in the `html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+```
+'defaultPermissions' => [
+  'user' => 33,
+  'group' => 33
+],
+```
+
+- Return to `/your_instance_name` and copy its data. Go to `root_folder_of_your_environment/html` and paste the copied files there.
+
+- While in the `root_folder_of_your_environment/html` folder, give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
   
 - Go to the database container through *Docker*:
+
 ```
 docker exec -it espocrm-mysql bash
 ```
 
 - And go to the database itself:
+  
 ```
 mysql -u root -p
 ```
 
 - Create an empty ***espocrm*** database:
+  
 ```
 CREATE DATABASE espocrm;
 ```
 
-- Exit from the database and container to the folder where our `.sql` dump is located. Run the command:
+- Exit from the Database and Container to the folder where our `.sql` dump is located. Run the command:
+  
 ```
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
 ```
 
-- Go to the container using the command:
-```
-docker exec -it espocrm-php bash
-```
-or better
+- Go to the container (using webserver user) the by command:
+
 ```
 docker exec -u www-data -it espocrm-php bash
 ```
@@ -258,7 +270,7 @@ docker exec -u www-data -it espocrm-php bash
 php rebuild.php
 ```
 
-- To be sure that the instance is working, log in to the UI of your instance: `localhost:8080` (or your other port).
+- To be sure that the instance is working, log in to the UI: `localhost:8080` (or your other port).
 
 
 ## Transfer of instance and database files
