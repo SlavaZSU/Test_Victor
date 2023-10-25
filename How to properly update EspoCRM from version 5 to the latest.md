@@ -338,3 +338,9 @@ unzip convert-myisam-to-innodb.zip
 ```
 docker exec -u www-data -it espocrm-php bash
 ```
+
+And run the command:
+
+```
+php convert-myisam-to-innodb.php
+```
