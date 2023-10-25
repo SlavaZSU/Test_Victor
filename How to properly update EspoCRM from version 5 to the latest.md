@@ -277,7 +277,7 @@ php rebuild.php
 
 ## Methods and process of upgrading EspoCRM v5.5.6
 
-- Download the following upgrades to `root_folder_of_your_environment/html` folder:
+- In [Upgrades](https://www.espocrm.com/download/upgrades/) download the following upgrades to `root_folder_of_your_environment/html` folder:
 
 ```
 wget https://www.espocrm.com/downloads/upgrades/EspoCRM-upgrade-5.5.6-to-5.6.14.zip
@@ -344,3 +344,7 @@ And run the command:
 ```
 php convert-myisam-to-innodb.php
 ```
+
+## Environment change before upgrading EspoCRM from v7.2.7 to v7.3.0
+
+Starting with version EspoCRM [7.3.0](https://github.com/espocrm/espocrm/releases/tag/7.3.0) support for *php 7.4* is droped. Therefore, it is necessary to change the environment for our instance on earlier versions, e.g. `7.2.7`.
