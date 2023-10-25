@@ -261,7 +261,7 @@ CREATE DATABASE espocrm;
 docker exec -i espocrm-mysql mysql -uroot -p1 espocrm < name_of_your_dump.sql
 ```
 
-- Go to the container (using webserver user) the by command:
+- Go to the *php container* (using webserver user) the by command:
 
 ```
 docker exec -u www-data -it espocrm-php bash
@@ -275,7 +275,7 @@ php rebuild.php
 
 - To be sure that the instance is working, log in to the UI: `localhost:8080` (or another free port specified in the environment's **docker-composer.yml**).
 
-## Methods and process of upgrading EspoCRM *v5.5.6*
+## Methods and process of upgrading EspoCRM v5.5.6
 
 - Download the following upgrades to `root_folder_of_your_environment/html` folder:
 
@@ -303,7 +303,7 @@ docker exec -u www-data -it espocrm-php bash
 php upgrade.php EspoCRM-upgrade-5.5.6-to-5.6.14.zip
 ```
 
-To verify that your instance is running successfully after the Upgrade, you can make *Rebuild* from UI (or by CLI):
+To verify that your instance is running successfully after the *Upgrade*, you can make *Rebuild* from UI (or by CLI):
 
 ```
 php rebuild.php
@@ -315,4 +315,26 @@ php rebuild.php
   
 ```
 php command.php upgrade
-``` 
+```
+
+### How to convert database tables to InnoDB
+
+If at one of the *Upgrade* stages you receive a message that you need to convert the database tables to *InnoDB*, you can do it as follows:  
+
+1. Go to `root_folder_of_your_environment/html` and download the script:
+
+```
+wget https://www.espocrm.com/downloads/scripts/convert-myisam-to-innodb.zip
+```
+
+2. Unzip it:
+
+```
+unzip convert-myisam-to-innodb.zip
+```
+
+3. Go to the *php container* (using webserver user) the by command:
+
+```
+docker exec -u www-data -it espocrm-php bash
+```
