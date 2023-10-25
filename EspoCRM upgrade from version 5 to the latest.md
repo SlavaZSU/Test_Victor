@@ -158,7 +158,7 @@ CMD ["apache2-foreground"]
 
 ### Docker-compose.yml preparation:
 
-The **docker-compose.yml** will have the following form (it's possible to specify another free port for the *espocrm-php* container):
+The **docker-compose.yml** will have the following form (it's possible to specify another free port for the *php container*):
 
 ```
 version: '3'
@@ -347,7 +347,9 @@ php convert-myisam-to-innodb.php
 
 ## Environment change before upgrading EspoCRM from v7.2.7 to v7.3.0
 
-Starting with version EspoCRM [7.3.0](https://github.com/espocrm/espocrm/releases/tag/7.3.0) support for *php 7.4* is droped. Therefore, it's necessary to change the environment for our instance on earlier versions, e.g. `7.2.7`. Supported php versions are: `8.0`, `8.1` or `8.2`. Для нового середовища ми використаємо для прикладу *php* `8.1`.
+Starting with version EspoCRM [7.3.0](https://github.com/espocrm/espocrm/releases/tag/7.3.0) support for *php 7.4* is droped. Therefore, it's necessary to change the Environment for our instance on earlier versions, e.g. `7.2.7`. Supported php versions are: `8.0`, `8.1` or `8.2`. 
+
+For the new Environment, we will use *php* `8.1` as an example.
 
 New **Dockerfile** for new *Enviroment* will look like:
 
