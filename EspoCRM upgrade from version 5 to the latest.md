@@ -345,13 +345,19 @@ And run the command:
 php convert-myisam-to-innodb.php
 ```
 
+4. Stop working of the old Environment:
+
+```
+docker-compose down -v
+```
+
 ## Environment change before upgrading EspoCRM from v7.2.7 to v7.3.0
 
 Starting with version EspoCRM [7.3.0](https://github.com/espocrm/espocrm/releases/tag/7.3.0) support for *php 7.4* is droped. Therefore, it's necessary to change the Environment for our instance on earlier versions, e.g. `7.2.7`. Supported php versions are: `8.0`, `8.1` or `8.2`. 
 
 For the new Environment, we will use *php* `8.1` as an example.
 
-New **Dockerfile** for new *Enviroment* will look like:
+- New **Dockerfile** for new *Enviroment* will look like:
 
 ```
 FROM php:8.1-apache
@@ -504,7 +510,7 @@ VOLUME /var/www/html
 CMD ["apache2-foreground"]
 ```
 
-New **docker-composer.yml** for new *Enviroment* will look like:
+- New **docker-composer.yml** for new *Enviroment* will look like:
 
 ```
 version: '3'
@@ -536,3 +542,28 @@ services:
       - 8081:80
 ```
 
+- Start container using the command:
+
+```
+docker-compose up -d --build
+```
+
+## Finalisation of Upgrade in the new environment and moving to another server
+
+- Then the building is finished, delete the `html` folder in the folder with the New Environment.
+
+- Go to the Old Environment folder and copy the `html` folder from there.
+
+- Go to the New Environment folder and paste the copied `html` folder here.
+
+- In the New Enviroment folder give the necessary [Permissions](https://docs.espocrm.com/administration/server-configuration/#permissions).
+
+- To be sure that the instance is working, log in to the UI: `localhost:8081` (or another free port specified in the environment's **docker-composer.yml**).
+
+- Upgrade EspoCRM to the latest version by CLI:
+
+```
+php command.php
+```
+
+- Execute [Moving EspoCRM to another server](https://docs.espocrm.com/administration/moving-to-another-server/#step-4-unarchive-backup-files), using the tips to copy only important data [!!!!!Transfer of Instance files and Database dump](https://github.com/SlavaZSU/Test_Victor/edit/main/EspoCRM%20upgrade%20from%20version%205%20to%20the%20latest.md#transfer-of-instance-files-and-database-dump).
