@@ -55,6 +55,10 @@ Available Placeholders:
 ![document](docs/images/document-3.png?raw=true)
 ![document](docs/images/document-4.png?raw=true)
 
+## Migration from v1 to v2 for ext-e-signature
+
+11111111111111
+
 ## Developer version
 
 ### Configuration and building
