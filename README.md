@@ -55,7 +55,7 @@ Available Placeholders:
 ![document](docs/images/document-3.png?raw=true)
 ![document](docs/images/document-4.png?raw=true)
 
-## Migration from v1 to v2 for ext-e-signature
+## Migration from v1 to v2 for E-Signature extension
 
 ### Option 1: for verions EspoCRM from `8.4.0` to `9.1.9`
 
