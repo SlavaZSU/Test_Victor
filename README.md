@@ -101,8 +101,6 @@ to
 
 скріншот-6
 
-blablabla2
-
 ## Developer version
 
 ### Configuration and building
