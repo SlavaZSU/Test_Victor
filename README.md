@@ -71,13 +71,13 @@ Available Placeholders:
 
 скріншот-3 
 
-- У створеному раніше PDF Template для вашої ентіті замініть:
+- У створеному раніше PDF Template для вашої ентіті замініть старий Placeholder from:
 
 ```
 <img src="{{img_data ESIGNATUREGFILEDNAME}}">
 ```
 
-на
+to
 
 ```
 <p><img src="{{eSignatureSign c<FIELD_NAME>}}"></p>
