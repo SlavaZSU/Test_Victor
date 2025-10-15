@@ -63,11 +63,11 @@ Available Placeholders:
 
 скріншот-Administration Extensions
 
-- In *Administration > Entity Manager > Your_entity_name* видаліть поле типу `E-Signature`, що було створене in E-Signature extension `1.0.3`.
+- In *Administration > Entity Manager > Your_entity_name* видаліть поле типу `eSignature`, що було створене in E-Signature extension `1.0.3`.
 
 скріншот-Administration Entity Manager Your_entity_name 
 
-- Відразу після цього створіть поле типу `eSignature` із аналогічним **name** із попереднього пункту.
+- Відразу після цього створіть поле типу `E-Signature` із аналогічним **name** із попереднього пункту.
 
 скріншот-3 
 
