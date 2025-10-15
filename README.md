@@ -87,6 +87,20 @@ to
 
 ### Option 2: for verions EspoCRM from `9.2.0`
 
+Оскільки на EspoCRM v9.2.0 E-Signature extension `1.0.3` перестало працювати, необхідно виконати дещо інші кроки:
+
+- In *Administration > Extensions* до раніше інстальованої E-Signature extension `1.0.3` інсталюйте `2.0.0`.
+
+скріншот-4
+
+- In *Administration > Entity Manager > Your_entity_name* видаліть поле типу `eSignature`, що було створене in E-Signature extension `1.0.3`.
+
+скріншот-5
+
+- Відразу після цього створіть поле типу `E-Signature` із аналогічним **name** із попереднього пункту.
+
+скріншот-6
+
 blablabla2
 
 ## Developer version
