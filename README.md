@@ -85,8 +85,6 @@ to
 <p>{{eSignatureDate c<FIELD_NAME>}}</p>
 ```
 
-скріншот-4
-
 ### Option 2: for verions EspoCRM from `9.2.0`
 
 blablabla2
