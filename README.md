@@ -71,7 +71,7 @@ Available Placeholders:
 
 скріншот-3 
 
-- У створеному раніше PDF Template для вашої ентіті замініть старий Placeholder from:
+Додатково у створеному раніше PDF Template для вашої ентіті замініть старий Placeholder from:
 
 ```
 <img src="{{img_data ESIGNATUREGFILEDNAME}}">
