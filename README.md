@@ -59,11 +59,17 @@ Available Placeholders:
 
 ### Option 1: for verions EspoCRM from `8.4.0` to `9.1.9`
 
-1. In *Administration > Extensions* до раніше інстальованої *Electronic signature for EspoCRM* `1.0.3` інсталюємо `2.0.0`.
+- In *Administration > Extensions* до раніше інстальованої *Electronic signature for EspoCRM* `1.0.3` інсталюйте `2.0.0`.
 
 скріншот-Administration Extensions
 
-2. 
+- In *Administration > Entity Manager > Your_entity_name* видаліть поле типу `E-Signature`, що було створене in *Electronic signature for EspoCRM* `1.0.3`.
+
+скріншот-Administration Entity Manager Your_entity_name 
+
+- Відразу після цього створіть поле типу `eSignature` із аналогічним **name** із попереднього пункту.
+
+скріншот-3 
 
 ### Option 2: for verions EspoCRM from `9.2.0`
 
