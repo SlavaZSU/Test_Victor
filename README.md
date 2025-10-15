@@ -57,7 +57,17 @@ Available Placeholders:
 
 ## Migration from v1 to v2 for ext-e-signature
 
-11111111111111
+### Option 1: for verions EspoCRM from `8.4.0` to `9.1.9`
+
+1. In *Administration > Extensions* до раніше інстальованої *Electronic signature for EspoCRM* `1.0.3` інсталюємо `2.0.0`.
+
+скріншот-Administration Extensions
+
+2. 
+
+### Option 2: for verions EspoCRM from `9.2.0`
+
+blablabla2
 
 ## Developer version
 
