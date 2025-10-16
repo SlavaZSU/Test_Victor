@@ -101,11 +101,13 @@ to
 
 ```
 c<NewSignatureFieldName> = c<OldSignatureFieldName>;
-
-// c<OldSignatureFieldName> = null;  // Optional: clear the original value if it's no longer required
 ```  
 
+- Перейдіть в List view вашої ентіті і виконайте *Recalculate Formula*
+
 скріншот-6
+
+- wwwww
 
 ## Developer version
 
