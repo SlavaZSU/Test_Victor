@@ -59,19 +59,19 @@ Available Placeholders:
 
 ### Option 1: for verions EspoCRM from `8.4.0` to `9.1.9`
 
-- In *Administration > Extensions* до раніше інстальованої E-Signature extension `1.0.3` інсталюйте `2.0.0`.
+- In *Administration > Extensions* install `2.0.0` to the previously installed E-Signature extension `1.0.3`.
 
 скріншот-Administration Extensions
 
-- In *Administration > Entity Manager > Your_entity_name* видаліть поле типу `eSignature`, що було створене in E-Signature extension `1.0.3`.
+- In *Administration > Entity Manager > Your_entity_name* delete the field of type `eSignature` that was created in E-Signature extension `1.0.3`.
 
 скріншот-Administration Entity Manager Your_entity_name 
 
-- Відразу після цього створіть поле типу `E-Signature` із аналогічним **name** із попереднього пункту.
+- Create a field of type `E-Signature` with the same **name** as in the previous point.
 
 скріншот-3 
 
-Додатково у створеному раніше PDF Template для вашої ентіті можна замінити старий Placeholder from:
+Additionally, in the previously created PDF Template for your entity, you can replace the old ***Placeholder*** from:
 
 ```
 <img src="{{img_data ESIGNATUREGFILEDNAME}}">
@@ -87,9 +87,9 @@ to
 
 ### Option 2: for verions EspoCRM from `9.2.0`
 
-Оскільки E-Signature extension `1.0.3` перестало працювати на EspoCRM v9.2.0, необхідно виконати наступні кроки:
+Since E-Signature extension `1.0.3` has stopped working on EspoCRM v9.2.0, perform the following steps:
 
-- In *Administration > Extensions* до раніше інстальованої E-Signature extension `1.0.3` інсталюйте `2.0.0`.
+- In *Administration > Extensions*, install `2.0.0` to the previously installed E-Signature extension `1.0.3`.
 
 або без нього --- скріншот-Administration Extensions
 
@@ -109,7 +109,7 @@ c<NewSignatureFieldName> = c<OldSignatureFieldName>;
 
 скріншот-6
 
-- Видаліть із Entity Manager i Layot Manager старе поле типу `eSignature`.
+- Видаліть із Entity Manager i Layout Manager старе поле типу `eSignature`.
 - Видаліть E-Signature extension `1.0.3`.
 
 ## Developer version
