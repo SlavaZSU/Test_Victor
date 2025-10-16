@@ -97,7 +97,13 @@ to
 
 скріншот-5
 
-- бла
+- In *Administration > Entity Manager > Your_entity_name > Formula > Before Save Custom Script* створіть формулу, котра буде копіювати дані із старого поля в нове:
+
+```
+c<NewSignatureFieldName> = c<OldSignatureFieldName>;
+
+// c<OldSignatureFieldName> = null;  // Optional: clear the original value if it's no longer required
+```  
 
 скріншот-6
 
