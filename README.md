@@ -93,11 +93,11 @@ Since E-Signature extension `1.0.3` has stopped working on EspoCRM v9.2.0, perfo
 
 або без нього --- скріншот-Administration Extensions
 
-- In *Administration > Entity Manager > Your_entity_name* створіть поле типу `E-Signature` із different **name**, ніж ви викоритовували у E-Signature extension `1.0.3`.
+- In *Administration > Entity Manager > Your_entity_name* create a field of type `E-Signature` with a different **name** than you used in E-Signature extension `1.0.3`.
 
 скріншот-5
 
-- In *Administration > Entity Manager > Your_entity_name > Formula > Before Save Custom Script* створіть формулу, котра буде копіювати дані із старого поля в нове:
+- In *Administration > Entity Manager > Your_entity_name > Formula > Before Save Custom Script* create a formula that will copy data from the old field to the new one:
 
 ```
 c<NewSignatureFieldName> = c<OldSignatureFieldName>;
@@ -105,12 +105,12 @@ c<NewSignatureFieldName> = c<OldSignatureFieldName>;
 // c<OldSignatureFieldName> = null;  // Optional: clear the original value if it's no longer required
 ```  
 
-- Перейдіть в List view вашої ентіті і виконайте *Recalculate Formula*.
+- Go to the List view of your entity and execute *Recalculate Formula*.
 
 скріншот-6
 
-- Видаліть із Entity Manager i Layout Manager старе поле типу `eSignature`.
-- Видаліть E-Signature extension `1.0.3`.
+- Remove the old `eSignature` type field from Entity Manager and Layout Manager.
+- Remove E-Signature extension `1.0.3`.
 
 ## Developer version
 
