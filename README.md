@@ -57,7 +57,7 @@ Available Placeholders:
 
 ## Migration from v1 to v2 for E-Signature extension
 
-### Option 1: for verions EspoCRM from v8.4.0 to v9.1.9
+### Option 1: for versions EspoCRM from v8.4.0 to v9.1.9
 
 - In *Administration > Extensions* install E-Signature extension `2.0.0` to the previously installed `1.0.3`.
 
@@ -85,7 +85,7 @@ to
 <p>{{eSignatureDate c<FIELD_NAME>}}</p>
 ```
 
-### Option 2: for verions EspoCRM from v9.2.0
+### Option 2: for versions EspoCRM from v9.2.0
 
 Since E-Signature extension `1.0.3` has stopped working on EspoCRM v9.2.0, perform the following steps:
 
