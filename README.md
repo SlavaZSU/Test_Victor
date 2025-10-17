@@ -61,15 +61,15 @@ Available Placeholders:
 
 - In *Administration > Extensions* install `2.0.0` to the previously installed E-Signature extension `1.0.3`.
 
-скріншот-Administration Extensions
+скріншот-Administration-Extensions
 
-- In *Administration > Entity Manager > Your_entity_name* delete the field of type `eSignature` that was created in E-Signature extension `1.0.3`.
+- In *Administration > Entity Manager > Your_entity_name* delete the field with `eSignature` type that was created in E-Signature extension `1.0.3`.
 
-скріншот-Administration Entity Manager Your_entity_name 
+скріншот-Administration-Entity-Manager-Your_entity_name-Fields-Remove-eSignature
 
-- Create a field of type `E-Signature` with the same **name** as in the previous point.
+- Create a field with `E-Signature` type with the same **name** as in the previous point.
 
-скріншот-3 
+screenhot-Administration-Entity-Manager-Document-Fields-E-Signature 
 
 Additionally, in the previously created PDF Template for your entity, you can replace the old ***Placeholder*** from:
 
@@ -91,7 +91,7 @@ Since E-Signature extension `1.0.3` has stopped working on EspoCRM v9.2.0, perfo
 
 - In *Administration > Extensions*, install `2.0.0` to the previously installed E-Signature extension `1.0.3`.
 
-або без нього --- скріншот-Administration Extensions
+скріншот-Administration-Extensions
 
 - In *Administration > Entity Manager > Your_entity_name* create a field of type `E-Signature` with a different **name** than you used in E-Signature extension `1.0.3`.
 
